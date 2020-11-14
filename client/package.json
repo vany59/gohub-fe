@@ -1,0 +1,78 @@
+{
+  "name": "myapp",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "prettier": "prettier --write ./src/*",
+    "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'",
+    "start": "vue-cli-service serve --mode development",
+    "sta": "vue-cli-service serve --mode staging",
+    "pro": "vue-cli-service serve --mode production",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:sta": "vue-cli-service build --mode staging",
+    "build:pro": "vue-cli-service build --mode production",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^4.3.0",
+    "lodash": "^4.17.20",
+    "material-design-icons-iconfont": "^5.0.1",
+    "rxjs": "^6.6.2",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "socket.io-client": "^2.3.0",
+    "uuid": "^8.3.0",
+    "vue": "^2.6.11",
+    "vue-html-to-paper": "^1.3.1",
+    "vue-i18n": "^8.17.3",
+    "vue-moment": "^4.1.0",
+    "vue-router": "^3.4.3",
+    "vue-socket.io": "^3.0.10",
+    "vue-style-loader": "^4.1.2",
+    "vue-xlsx": "^0.2.1",
+    "vue2-editor": "^2.10.2",
+    "vuetable-2": "^2.0.0-beta.4",
+    "vuetify": "^2.3.12",
+    "vuex": "^3.5.1",
+    "xlsx": "^0.16.6"
+  },
+  "devDependencies": {
+    "@intlify/vue-i18n-loader": "^1.0.0",
+    "@mdi/font": "^5.5.55",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^1.19.1",
+    "vue-cli-plugin-i18n": "~1.0.1",
+    "vue-cli-plugin-resolve-alias": "~0.1.3",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "@vue/prettier"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
