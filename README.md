@@ -1,16 +1,36 @@
 # GOHUB-FE
 
+## App
+
 ```
-cd client
+cd server
 ```
 
-## INSTALL
+### Install
 
 ```
 npm i
 ```
 
-## START
+## Start
+
+```
+npm start
+```
+
+## Dev
+
+```
+cd client
+```
+
+### install
+
+```
+npm i
+```
+
+### start
 
 ```
 npm start
