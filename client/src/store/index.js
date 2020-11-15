@@ -16,6 +16,7 @@ const pages = [
   "Profile",
 
   //page
+  "Account",
 
   //component
   "Gender",
@@ -80,6 +81,19 @@ const rules = {
     /^(\d{9}|\d{12})$/.test(v) || i18n.messages[i18n.locale].rule.indentity
 };
 
+const missions = {
+  M_STOCK: "4e106670-1875-11eb-95f6-8d165ade4f8c",
+  M_STUDENT: "45c00aa0-261e-11eb-8167-65016ef15f6e",
+  M_TEACHER: "33c82080-261e-11eb-8167-65016ef15f6e",
+  M_ACCOUNT: "931b42f0-263d-11eb-8bd1-bbfd3a1828e6"
+};
+const privileges = {
+  P_DELETE: "f3dffae0-1873-11eb-95f6-8d165ade4f8c",
+  P_UPDATE: "f1fff040-1873-11eb-95f6-8d165ade4f8c",
+  P_CREATE: "efed3ce0-1873-11eb-95f6-8d165ade4f8c",
+  P_READ: "eda34ce0-1873-11eb-95f6-8d165ade4f8c"
+};
+
 export const state = {
   Api,
   Host: process.env.VUE_APP_API,
@@ -92,8 +106,8 @@ export const state = {
   IsFirstLogin: false,
   Rules: { ...rules },
   ...assignPage,
-  // ...mission,
-  // ...privilege,
+  ...missions,
+  ...privileges,
   Tabs: {
     assign: 0,
     search: 0,
@@ -174,6 +188,10 @@ export const actions = {
       token: state.Token.access_token
     });
     if (code === 401) {
+      dispatch("fnOpenNotification", {
+        type: code === 200 ? "success" : "error",
+        message
+      });
       await dispatch("fnLogout");
       await dispatch("fnPost", { url, model });
     } else if (showNoti) {

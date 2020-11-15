@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"main": "main.js",
 	"scripts": {
-		"start": "PORT=3000 SRV_URL_AUTH=crmd.bank2go.vn BASIC_TOKEN='Basic ZDAwYjcwNGEtOWZjMC00NjI4LTgzZTItMjU4NmE2ZTJjNGMxOjMyMTcxOGI3LTM3YmItNDEwNi1iYThmLTliMjdlNDE1OTc3YQ==' node main.js"
+		"start": "node main.js"
 	},
 	"dependencies": {
 		"@hapi/joi": "^17.1.1",

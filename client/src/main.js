@@ -16,13 +16,6 @@ import i18n from "./i18n";
 import Notification from "./components/Notification";
 import Button from "./components/Button";
 import Upload from "./components/Upload";
-import DatePicker from "./components/DatePicker";
-import DatePickerRange from "./components/DatePickerRange";
-import Gender from "./components/Gender";
-import Province from "./components/Province";
-import District from "./components/District";
-import Ward from "./components/Ward";
-import Career from "./components/Career";
 
 Vue.prototype._ = _;
 Vue.config.productionTip = false;
@@ -34,13 +27,6 @@ Vue.component("v-editor", VueEditor);
 Vue.component("v-notification", Notification);
 Vue.component("v-btnc", Button);
 Vue.component("v-upload", Upload);
-Vue.component("v-datePicker", DatePicker);
-Vue.component("v-datePickerRange", DatePickerRange);
-Vue.component("v-gender", Gender);
-Vue.component("v-province", Province);
-Vue.component("v-district", District);
-Vue.component("v-ward", Ward);
-Vue.component("v-career", Career);
 
 Vue.filter("mDateTime", v => Vue.moment.unix(v).format("HH:mm DD/MM/YYYY"));
 Vue.filter("mDate", v => Vue.moment.unix(v).format("DD/MM/YYYY"));
@@ -62,7 +48,7 @@ new Vue({
     theme: {
       themes: {
         light: {
-          primary: "#306EBB",
+          primary: "#00897B",
           secondary: colors.grey
         },
         dark: {

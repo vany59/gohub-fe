@@ -1,5 +1,5 @@
 <template>
-  <span v-if="IsLogin && !IsFirstLogin">
+  <span v-if="IsLogin && menu.length">
     <v-card class="mx-auto">
       <v-navigation-drawer
         app
@@ -9,7 +9,7 @@
         permanent
         width="200"
       >
-        <v-list dense auto>
+        <v-list dense auto v-if="menu.length">
           <v-list-item
             v-for="item in menu"
             :to="item.path"

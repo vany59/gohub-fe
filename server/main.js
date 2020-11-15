@@ -5,7 +5,7 @@ const compression = require("compression");
 const joi = require("@hapi/joi");
 const query = require("querystring");
 const axios = require("axios");
-const { PORT = 3000, SRV_URL_AUTH, BASIC_TOKEN } = process.env;
+const { PORT = 3001, SRV_URL_AUTH, BASIC_TOKEN } = process.env;
 const http = axios.create({ baseURL: `http://${SRV_URL_AUTH}`, timeout: 1000 });
 
 const app = express();

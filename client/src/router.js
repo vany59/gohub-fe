@@ -9,6 +9,7 @@ import Login from "@pages/Login";
 import Logout from "@pages/Logout";
 import Forgot from "@pages/Forgot";
 import Profile from "@pages/Profile";
+import Account from "./pages/account/Account.vue";
 
 Vue.use(Router);
 
@@ -59,6 +60,15 @@ const router = new Router({
       redirect: "/",
       props: {
         auth: true
+      }
+    },
+    {
+      path: "/account",
+      name: "account",
+      component: Account,
+      props: {
+        auth: true,
+        mission: [{ m: store.state.M_ACCOUNT, p: store.state.P_READ }]
       }
     }
   ]
